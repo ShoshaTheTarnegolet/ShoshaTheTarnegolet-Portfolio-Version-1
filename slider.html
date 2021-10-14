@@ -4,31 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/about.css">
-  <!-- fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/sliders.css">
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500&display=swap" rel="stylesheet">
 
         <!-- jquery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
     <title>Document</title>
 </head>
 <body>
-    <section class="hero-header" id="header">
+
+    <section class=" hero-header" >
+   <div id="hero">     <img src="./img/logo.png" alt=""></div>
         <nav class="hero-navbar">
             <a class="hero-nav-link" href="#about">About</a>
-            <a class="hero-nav-link" href="#video">Video</a>
-            <a class="hero-nav-link" href="#map">Map</a>
-            <a class="hero-nav-link" href="#">Contact</a>
+            <a class=" hero-nav-link" href="#video">Video</a>
+            <a class="hero-nav-link" href="#contact">Contact</a>
             <span class="hero-slider"></span>
-          </nav>
-    </section>
+        </nav>
+      </section>
 <!-- hero ends -->
       <!-- Main -->
-      <main id="main">
+      <main class="et-main">
         <section id="about" class="block">
+            <div class="col-animate">
+            </div>
                <div class="container">
                       <div class="col">
                            <h1 class="header"> About me</h1>
@@ -49,36 +51,22 @@
             <div class="col-animate">
             </div>
             <div class="container">
-                <div class="col">
-            <h1 class="header">Video</h1>
-<video controls preload="auto" poster="./img/Welcome-to-the-Internet.jpg">
-<source src="./video/Welcome to the Internet - Bo Burnham.mp4" type='video/mp4' codecs="avc1.42E01E, mp4a.40.2">
-</video>
-
-           </div>
+           <div class="col">
+            <h1>Video</h1>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam in hic dicta adipisci fugit quasi saepe culpa aut deserunt neque vero temporibus reprehenderit sit ipsum, sint, suscipit vitae unde illum.</p></div>
             </div>
            </section>
 <!-- video ends -->
-<section id="map" class="block">
+<section id="contact" class="block">
     <div class="col-animate">
     </div>
     <div class="container">
    <div class="col">
-    <h1 class="header">Map</h1>
-    <div class="buttons">
-        <button id="prev" class="btn map-btn"><span>Previous</span></button>
-        <button id="next" class="btn map-btn"><span>Next</span></button>
-    </div>
-       <div class="map-block"><iframe id="iframe" src="https://www.google.com/maps/d/u/0/embed?mid=17KSIpyknFBo0UqEvd_yRzA4buBiFu1gF" allowfullscreen="" loading="lazy"></iframe>
-       </div>
-    </div>
+    <h1>Contact</h1>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam in hic dicta adipisci fugit quasi saepe culpa aut deserunt neque vero temporibus reprehenderit sit ipsum, sint, suscipit vitae unde illum.</p></div>
     </div>
    </section>
-<!-- map ends -->
-    <footer id="footer">
-           <img src="./img/logo2.png" alt="">
-    </footer>
-    <!-- footer ends -->
-<script src="./about.js"></script>
+
+<script src="./slider.js"></script>
 </body>
 </html>

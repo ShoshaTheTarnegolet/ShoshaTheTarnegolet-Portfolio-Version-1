@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <!-- fonts -->
+    <script src="https://kit.fontawesome.com/d8ab0e903f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- jquery -->
+    <script type="text/javascript" src="jquery-1.12.1.min.js"></script>
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="hero-header" id="header">
+      <nav class="hero-navbar">
+        <a class="hero-nav-link" href="#links">Links</a>
+        <a class="hero-nav-link" href="#contact">Contact</a>
+
+        <span class="hero-slider"></span>
+      </nav>
+    </section>
+    <!-- hero ends -->
+    <main id="main">
+
+        <section id="links" class="block">
+            <div class="col-animate">
+            </div>
+               <div class="container">
+                      <div class="col">
+                           <h1 class="header"> Links</h1>
+                        <div class="link-block">
+                               <div class="link github">
+                                <div class="tooltip">Github</div>
+                                <span><i class="fab fa-github"></i></span>
+                              </div>
+                              <div class="link github">
+                                <div class="tooltip">Github</div>
+                                <span><i class="fab fa-github"></i></span>
+                              </div>
+                              <div class="link github">
+                                <div class="tooltip">Github</div>
+                                <span><i class="fab fa-github"></i></span>
+                              </div>
+                        </div>
+                 <div class="cards">
+                            <div class="card">
+                                <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
+                                <div class="contact-info">
+                                    <p>Phone</p>
+                                    <p>+1 234 123 1234</p>
+                                    <p>+1 234 123 1234</p>
+                                  </div>
+                            </div>
+                            <div class="card">
+                                <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
+                                <div class="contact-info">
+                                    <p>Email</p>
+                                    <p>info@gmail.com</p>
+                                    <p>abcd@gmail.com</p>
+                                  </div>
+                            </div>
+                            <div class="card">
+                                <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
+                                <div class="contact-info">
+                                    <p>Address</p>
+                                <p>Lorem Ispium</p>
+                                  </div>
+                            </div>
+
+                 </div>
+                     </div>
+                     <!-- col -->
+               </div>
+<!-- container -->
+           </section>
+
+
+        <section id="contact" class="block ">
+            <div class="col-animate">
+            </div>
+            <div id="modal">
+                <div class="modal-wrap">
+                    <div class="calendar-wrapper">
+                        <button id = 'close' class="close-button"><i class="fas fa-times"></i></button>
+                        <button id="btnPrev" type="button">Prev</button>
+                            <button id="btnNext" type="button">Next</button>
+                        <div id="divCal"></div>
+                      </div>
+                   <!--  <div id="container" class="calendar-container"><div id="eventslink">Calendar</div>
+                    <button id = 'close' class="close-button"><i class="fas fa-times"></i></button>
+<div id="listevents">
+</div>
+<div id="calendar">
+</div>
+ <div id="evt">
+</div>
+<div id="de">
+</div>
+</div> -->
+                </div>
+            </div>
+            <div class="container">
+              <div class="col">
+                    <h1 class="header">
+                        Contact Me
+                    </h1>
+              <!-- <div class="form-block"> -->
+                      <form action="#" id="contact-form">
+                                <div class="text-input">
+                                <input type="text" name="name" id="name" placeholder="Name" required="required" /></div>
+                                        <div class="text-input">
+                                            <input type="text" name="lastName" id="lastName" placeholder="Last Name" /></div>
+
+                                <div class="text-input">
+                                  <input type="email" name="email" id="email" placeholder="Email" pattern=".+@globex\.com" size="30" required="required"/>
+                                </div>
+                                <div class="text-input">
+                                   <div class="input2">
+                                        <input type="text" name="phone" id="phone" placeholder="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+                                        <input type="datetime-local"
+                                        value='' name="date"  min="2021-10-10" id="date" placeholder="Date/Time">
+                                   </div>
+                                  </div>
+                                  <div class="text-input">
+                                      <textarea name="message" id="message" cols="10" rows="2" placeholder="Message"></textarea>
+                                    </div>
+                                  </form>
+                                <div class="form-bottom">
+                                    <button id="calendarBtn" class="btn map-btn"><span>Calendar</span></button>
+                                    <button id="submit" class="btn map-btn"><span>Submit</span></button>
+                                </div>
+                          </form>
+
+              <!-- </div> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+      <img src="./img/logo2.png" alt="" />
+    </footer>
+    <!-- footer ends -->
+    <script src="/contact.js"></script>
+    <script type="text/javascript" src="cal.js"></script>
+  </body>
+</html>

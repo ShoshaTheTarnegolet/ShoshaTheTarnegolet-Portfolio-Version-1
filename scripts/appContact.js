@@ -1,45 +1,22 @@
+/* calendar and modal */
 const calendarBtn = document.getElementById('calendarBtn');
 const modal = document.getElementById('modal');
-const contactSection = document.getElementById('contact');
+const main = document.getElementById('main');
 const closeButton = document.getElementById('close');
 
-calendarBtn.addEventListener('click',showModal);
+calendarBtn.addEventListener('click', showModal);
 
 function showModal() {
-    modal.style.visibility = 'visible';
-// contactSection.classList.toggle('blur');
+  modal.style.visibility = 'visible';
+  // main.classList.toggle('blur');
 }
 function hideModal() {
-    modal.style.visibility = 'hidden';
+  modal.style.visibility = 'hidden';
 }
 
 closeButton.addEventListener('click', hideModal);
-/* modal ends
-const calend = document.getElementById('date');
-calend.addEventListener('change', () => {
-    console.dir(calend.value);
-})
-*/
-/* ca;endar input */
-let observedEl = document.querySelectorAll('.col-animate');
 
-const options = {
-  root: null,
-  threshold: 0.7,
-};
-
-const inViewCallback = (entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animate');
-    }
-  });
-};
-let observer = new IntersectionObserver(inViewCallback, options);
-observedEl.forEach((el) => {
-  observer.observe(el);
-});
-
+/* sticky header and nav */
 class StickyNavigation {
   constructor() {
     this.currentId = null;
@@ -104,14 +81,10 @@ class StickyNavigation {
   }
 
   setSliderCss() {
-    let width = 0;
     let left = 0;
     if (this.currentTab) {
-      width = this.currentTab.css('width');
       left = this.currentTab.offset().left;
     }
-    $('.hero-slider').css('width', width);
-    $('.hero-slider').css('left', left);
   }
 }
 

@@ -323,7 +323,7 @@ form {
   position: relative;
   padding-left: 20px;
   text-transform: uppercase;
-  color: #858585;
+  color: #3d405b;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -577,7 +577,7 @@ thead td {
 }
 .footer-img {
   height: 100%;
-  background-image: url('/img/tarnegol.png');
+  background-image: url('https://github.com/ShoshaTheTarnegolet/ShoshaTheTarnegolet-Portfolio-Version-1/blob/main/img/tarnegol.png?raw=true');
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;

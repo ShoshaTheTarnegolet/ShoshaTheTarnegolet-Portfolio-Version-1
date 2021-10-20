@@ -1,3 +1,4 @@
+/* date manage */
 let nowDate = new Date(),
   nowDateNumber = nowDate.getDate(),
   nowMonth = nowDate.getMonth(),
@@ -10,10 +11,10 @@ let nowDate = new Date(),
   next = container.getElementsByClassName('next')[0],
   monthName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-/* current day */
 let curDate = nowDate.setMonth(nowDate.getMonth() - 1);
 console.log(nowDate.getFullYear());
-/* create calendar and today date */
+
+/* create calendar */
 function setMonthCalendar(year, month) {
   let monthDays = new Date(year, month + 1, 0).getDate(),
     monthPrefix = new Date(year, month, 0).getDay(),
@@ -64,23 +65,20 @@ next.onclick = function () {
 
   setMonthCalendar(curYear, curMonth);
 };
-/* trying to enter chosen date but not suceed in this */
-const calend = document.getElementById('date');
-// let dateChosen = calend.value;
-// let dArr = dateChosen.split('-');
-// const [chYear, chMon, chDat] = dArr;
-// let chosenDate = new Date(chYear, chMon, chDat).getDate();
-// let chosenMon = new Date(chYear, chMon, chDat).getMonth();
-/*
-let click = calend.addEventListener('change', () => {
-    let dateChosen = calend.value;
-    let dArr = dateChosen.split('-');
-    const [chYear, chMon, chDat] = dArr;
-    let chosenDate = new Date(chYear, chMon, chDat).getDate();
-    let chosenMon = new Date(chYear, chMon, chDat).getMonth();
-    let chosenY = new Date(chYear, chMon, chDat).getFullYear();
 
+/* trying to enter chosen date from input to modal calendar */
+const dateInput = document.getElementById('date');
+dateInput.setAttribute('min', `${nowYear}-${nowMonth + 1}-${nowDateNumber}`);
+
+let click = dateInput.addEventListener('change', () => {
+  let dateChosen = dateInput.value;
+  let dArr = dateChosen.split('-');
+  const [chYear, chMon, chDat] = dArr;
+  let chosenDate = new Date(chYear, chMon, chDat).getDate();
+  let chosenMon = new Date(chYear, chMon, chDat).getMonth();
+  let chosenY = new Date(chYear, chMon, chDat).getFullYear();
+  if (chosenMon == nowMonth + 1 && chosenY == nowYear) {
     days = daysContainer.getElementsByTagName('li');
-    days[chosenDate + 3].classList.add('date-now');
-  });
- */
+    days[chosenDate + 3].classList.add('chosen-date');
+  }
+});

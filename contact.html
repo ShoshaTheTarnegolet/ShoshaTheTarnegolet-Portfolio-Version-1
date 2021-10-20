@@ -94,12 +94,14 @@
               <div class="col-animate">
               </div>
               <!-- modal&calendar -->
-              <div id="modal">
-                  <div class="modal-wrap">
-                    <div id="month-calendar">
+              <div id="modal-container">
+                <div class="modal-background">
+                  <div class="modal">
+                     <div id="month-calendar">
+
                       <ul class="month">
                         <button id = 'close' class="close-button"><i class="fas fa-times"></i></button>
-                          <li class="prev" id="btnPrev"></li>
+                          <li class="prev" id="btnPrev"><i class="fas fa-backward"></i></li>
                           <li class="next" id="btnNex"><i class="fas fa-forward"></i></li>
                           <li class="month-name"></li>
                           <li class="year-name"></li>
@@ -116,7 +118,9 @@
                       <ul class="days">
                       </ul>
                   </div>
+
                   </div>
+                </div>
               </div>
               <div class="container">
                 <div class="col">
@@ -137,7 +141,8 @@
                                      <div class="input2">
                                           <input type="text" name="phone" id="phone" placeholder="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
                                           <input type="date"
-                                          value='' name="date"  min="2021-10-10" id="date" placeholder="Date/Time">
+                                           name="date"  id="date"
+                                  placeholder="Date/Time">
                                      </div>
                                     </div>
                                     <div class="text-input">

@@ -1,20 +1,23 @@
 /* calendar and modal */
-const calendarBtn = document.getElementById('calendarBtn');
-const modal = document.getElementById('modal');
-const main = document.getElementById('main');
+
+const button = document.getElementById('calendarBtn');
 const closeButton = document.getElementById('close');
+const modal = document.getElementById('modal-container');
+const contactSections = document.getElementById('contact');
 
-calendarBtn.addEventListener('click', showModal);
+button.addEventListener('click', () => {
+  modal.classList.add('one');
+  contactSections.classList.add('modal-active');
+  if (modal.classList.contains('out')) {
+    modal.classList.remove('out');
+  }
+});
 
-function showModal() {
-  modal.style.visibility = 'visible';
-  // main.classList.toggle('blur');
-}
-function hideModal() {
-  modal.style.visibility = 'hidden';
-}
-
-closeButton.addEventListener('click', hideModal);
+closeButton.addEventListener('click', () => {
+  contactSections.classList.remove('modal-active');
+  modal.classList.toggle('out');
+  modal.classList.remove('one');
+});
 
 /* sticky header and nav */
 class StickyNavigation {

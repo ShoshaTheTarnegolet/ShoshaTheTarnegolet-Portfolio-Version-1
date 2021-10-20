@@ -68,9 +68,11 @@ next.onclick = function () {
 
 /* trying to enter chosen date from input to modal calendar */
 const dateInput = document.getElementById('date');
+const submitBtn = document.getElementById('submit')
+
 dateInput.setAttribute('min', `${nowYear}-${nowMonth + 1}-${nowDateNumber}`);
 
-let click = dateInput.addEventListener('change', () => {
+submitBtn.addEventListener('click', () => {
   let dateChosen = dateInput.value;
   let dArr = dateChosen.split('-');
   const [chYear, chMon, chDat] = dArr;
@@ -82,3 +84,17 @@ let click = dateInput.addEventListener('change', () => {
     days[chosenDate + 3].classList.add('chosen-date');
   }
 });
+
+/* this is a function to do it without submit button
+let click = dateInput.addEventListener('change', () => {
+  let dateChosen = dateInput.value;
+  let dArr = dateChosen.split('-');
+  const [chYear, chMon, chDat] = dArr;
+  let chosenDate = new Date(chYear, chMon, chDat).getDate();
+  let chosenMon = new Date(chYear, chMon, chDat).getMonth();
+  let chosenY = new Date(chYear, chMon, chDat).getFullYear();
+  if (chosenMon == nowMonth + 1 && chosenY == nowYear) {
+    days = daysContainer.getElementsByTagName('li');
+    days[chosenDate + 3].classList.add('chosen-date');
+  }
+}); */

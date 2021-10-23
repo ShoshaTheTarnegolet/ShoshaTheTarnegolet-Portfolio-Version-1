@@ -33,14 +33,17 @@ img {
   width: 100%;
   display: block;
 }
-/* header, nav and links */
-#header {
-  height: 70px;
-  background-color: #fdd264;
+.flex-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+/* header, nav and links */
+#header {
+  height: 70px;
+  background-color: #fdd264;
+  flex-direction: column;
   position: relative;
   width: 100%;
 }
@@ -67,9 +70,6 @@ img {
   text-decoration: none;
   text-transform: uppercase;
   color: #3d405b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex: 1;
   position: relative;
   letter-spacing: 0.1rem;
@@ -102,10 +102,7 @@ img {
 
 /* main starts */
 .block {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   position: relative;
   background: #fff9ec;
@@ -123,10 +120,7 @@ img {
 .col {
   max-width: 50%;
   flex: 0 0 50%;
-  display: flex;
   flex-flow: column;
-  justify-content: center;
-  align-items: center;
 }
 .col-animate {
   opacity: 0;
@@ -158,10 +152,7 @@ video {
 }
 /* map section */
 .buttons {
-  display: flex;
   flex-flow: row;
-  justify-content: center;
-  align-items: center;
 }
 iframe {
   width: 54vw;
@@ -215,11 +206,6 @@ button {
   }
 }
 
-@media (min-width: 800px) {
-  h1 {
-    /* font-size: 3rem; */
-  }
-}
 /* keyframes */
 @keyframes fadeOn {
   0% {

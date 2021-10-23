@@ -37,15 +37,17 @@ img {
   width: 100%;
   display: block;
 }
-/* header, nav and links */
-#header {
-  height: 70px;
-  background: #fdd264;
+.flex-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* position: relative; */
+}
+/* header, nav and links */
+#header {
+  height: 70px;
+  background: #fdd264;
+  flex-direction: column;
   width: 100%;
 }
 .hero-navbar {
@@ -70,9 +72,6 @@ img {
   text-decoration: none;
   text-transform: uppercase;
   color: #3d405b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex: 1;
   letter-spacing: 0.1rem;
   transition: all 0.5s ease;
@@ -107,20 +106,13 @@ img {
 }
 /* main starts */
 .block {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   position: relative;
   background: #fff9ec;
   width: 100%;
 }
-/* #contact {
-  height: 70%;
-} */
 .container {
-  /* height: 100%; */
   padding: 0 15px;
   margin: 0 5%;
   display: flex;
@@ -131,13 +123,8 @@ img {
 }
 .col {
   max-width: 100%;
-  /* height: 100%; */
   width: 70vw;
-  /* flex: 0 0 50%; */
-  display: flex;
   flex-flow: column;
-  justify-content: center;
-  align-items: center;
 }
 .col-animate {
   opacity: 0;
@@ -168,10 +155,6 @@ img {
   width: 60px;
   height: 60px;
   font-size: 18px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -227,10 +210,7 @@ img {
   margin-bottom: 2%;
 }
 .card {
-  display: flex;
   flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
   padding: 2%;
   box-shadow: 0px 0px 18px 0 #0000002c;
   background: #fff;
@@ -319,7 +299,6 @@ form {
 #message,
 #date {
   font-family: 'Spartan', sans-serif;
-  /* font: 400 1.5rem/1.5 'Spartan', sans-serif; */
   position: relative;
   padding-left: 20px;
   text-transform: uppercase;
@@ -367,7 +346,6 @@ button {
 #contact.modal-active {
   overflow: hidden;
 }
-
 #modal-container {
   position: fixed;
   display: table;
@@ -386,7 +364,6 @@ button {
   transform: scale(0);
   animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
-
 #modal-container.out {
   transform: scale(1);
   animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
@@ -394,25 +371,19 @@ button {
 #modal-container.one .out .modal-background .modal {
   animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
-
 #modal-container .modal-background {
   display: table-cell;
   background: rgba(0, 0, 0, 0.8);
   text-align: center;
   vertical-align: middle;
 }
-
 .modal {
   background: transparent;
   padding: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 3px;
   font-weight: 300;
   position: relative;
 }
-
 #close {
   position: absolute;
   bottom: 95%;
@@ -435,18 +406,15 @@ button {
   display: flex;
   flex-flow: column nowrap;
 }
-
 .month {
   position: relative;
   margin: 0;
   padding: 5%;
   background: #3d405b;
   text-align: center;
-  /* width: 100%; */
   color: #ffffff;
   list-style: none;
 }
-
 .month li {
   padding: 0;
   margin: 0;
@@ -456,20 +424,16 @@ button {
   text-transform: uppercase;
   font-weight: 700;
 }
-
 .month li.prev,
 .month li.next {
   cursor: pointer;
 }
-
 .month li.prev {
   float: left;
 }
-
 .month li.next {
   float: right;
 }
-
 .month li.year-name {
   font-size: 1.2rem;
   font-weight: 400;
@@ -489,7 +453,6 @@ button {
   flex-wrap: nowrap;
   justify-content: left;
 }
-
 .weekdays li {
   display: inline-block;
   flex: 0 0 calc(100% / 7);
@@ -499,14 +462,12 @@ button {
   margin: 0;
   padding: 1rem 0;
   background-color: #fff9ec;
-
   width: 500px;
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
   align-content: flex-start;
 }
-
 .days li {
   padding: 0.5rem;
   list-style: none;
@@ -517,7 +478,6 @@ button {
   font-size: 0.9rem;
   line-height: 1rem;
 }
-
 .days li.date-now {
   color: #ff9371;
   font-weight: 700;
@@ -547,9 +507,6 @@ button {
   background-image: url('https://github.com/ShoshaTheTarnegolet/ShoshaTheTarnegolet-Portfolio-Version-1/blob/main/img/tarnegol.png?raw=true');
   background-size: contain;
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .end {
   text-align: center;

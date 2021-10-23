@@ -43,7 +43,8 @@ function setMonthCalendar(year, month) {
 }
 
 setMonthCalendar(nowYear, nowMonth);
-/* button click */
+
+/* button click next and previous month*/
 prev.onclick = function () {
   let curDate = new Date(yearContainer.textContent, monthName.indexOf(monthContainer.textContent));
 
@@ -68,7 +69,7 @@ next.onclick = function () {
 
 /* trying to enter chosen date from input to modal calendar */
 const dateInput = document.getElementById('date');
-const submitBtn = document.getElementById('submit')
+const submitBtn = document.getElementById('submit');
 
 dateInput.setAttribute('min', `${nowYear}-${nowMonth + 1}-${nowDateNumber}`);
 
